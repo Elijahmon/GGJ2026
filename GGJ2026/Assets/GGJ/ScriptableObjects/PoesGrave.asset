@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c636c007e6812949adbcb2d106f3c5a, type: 3}
+  m_Name: PoesGrave
+  m_EditorClassIdentifier: Assembly-CSharp::CollectableSO
+  DisplayName: Edgar Allan Poe's Grave
+  Prefab: {fileID: 7500488358039400984, guid: 69a24e22b50367d409768442f47f654c, type: 3}
+  GPSLocation:
+    x: 39.29017470770914
+    y: -76.6235796086481
+  VisibilityRadius: 50
+  CollectRadius: 10
