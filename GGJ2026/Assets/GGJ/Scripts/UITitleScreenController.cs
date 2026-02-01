@@ -1,16 +1,17 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UITitleScreenController : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    
+    public void OnStartWithGPSPressed()
     {
-        
+        SceneManager.LoadScene(1);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnStartWithoutGPSPressed()
     {
-        
+        SceneManager.LoadScene(2);
     }
 }

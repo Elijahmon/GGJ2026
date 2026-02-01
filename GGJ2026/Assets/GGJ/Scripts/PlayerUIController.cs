@@ -14,6 +14,8 @@ public class PlayerUIController : MonoBehaviour
     [SerializeField]
     Button _MaskInventoryButton;
 
+    [SerializeField]
+    GameObject _LoadingOverlay;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,6 +28,11 @@ public class PlayerUIController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void HideLoadOverlay()
+    {
+        _LoadingOverlay.SetActive(false);
     }
 
     public void OnMaskInventoryUpdated(List<MaskSO> inventory, MaskSO active)

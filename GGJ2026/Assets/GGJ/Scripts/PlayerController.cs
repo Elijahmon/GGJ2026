@@ -59,6 +59,8 @@ public class PlayerController : MonoBehaviour
             _UIController = GetComponentInChildren<PlayerUIController>();
         }
 
+        _UIController.HideLoadOverlay();
+
         InitGPSController();
     }
 
@@ -166,8 +168,11 @@ public class PlayerController : MonoBehaviour
         if (!Main.Instance.IsMapReady)
             return;
 
-        HandleInput();
-        Move();
+        if(MovementMode == PlayerMovementMode.TapToMove)
+        {
+            HandleInput();
+            Move();
+        }
 
         UpdateActiveMask();
     }
