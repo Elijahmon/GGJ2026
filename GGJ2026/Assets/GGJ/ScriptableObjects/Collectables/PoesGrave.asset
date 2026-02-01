@@ -19,3 +19,4 @@ MonoBehaviour:
     y: -76.6235796086481
   VisibilityRadius: 50
   CollectRadius: 10
+  MaskReward: {fileID: 11400000, guid: 538ce704ab6e4734a878315c28201598, type: 2}

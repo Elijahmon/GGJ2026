@@ -16,13 +16,13 @@ public class PlayerGPSController : MonoBehaviour
     public Vector2d LastGPSLocation { get; private set; }
     private float GPSTimer = 0.0f;
 
+    private Vector2 LastInputPosition;
+
     [Header("Debug")]
     [SerializeField]
     private bool OverrideGPSLocation = false;
     [SerializeField]
     private Vector2d OverrideLocation = new Vector2d(39.30828329216619f, -76.62128196818767f);
-    [SerializeField]
-    private float OverrideMoveSpeedMetersPerSecond = 10f;
 
     void Start()
     {
@@ -93,9 +93,12 @@ public class PlayerGPSController : MonoBehaviour
 
     void UpdateGPSLocation(bool forceMapUpdate)
     {
+        if (OverrideGPSLocation)
+            return;
+
         LocationInfo lastLocationUpdate = Input.location.lastData;
 
-        LastGPSLocation = OverrideGPSLocation ? OverrideLocation : new Vector2d(lastLocationUpdate.latitude, lastLocationUpdate.longitude);
+        LastGPSLocation = new Vector2d(lastLocationUpdate.latitude, lastLocationUpdate.longitude);
 
         if (forceMapUpdate)
         {
@@ -110,6 +113,11 @@ public class PlayerGPSController : MonoBehaviour
     {
         OverrideLocation = GPSLocation;
 
-        UpdateGPSLocation(true);
+        Main.Instance.UpdateMapLocation(OverrideLocation);
+    }
+
+    public void UpdatePlayerPosition(Vector3 position)
+    {
+        UpdateOverrideLocation(Main.Instance.WorldToGPSLocation(position));
     }
 }

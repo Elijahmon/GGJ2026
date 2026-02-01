@@ -24,8 +24,10 @@ public class Main : MonoBehaviour
 
     void Awake()
     {
-        //DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(this.gameObject);
+        
         InitializReferences();
+        DontDestroyOnLoad(_Map);
 
         IsMapReady = false;
     }
@@ -90,7 +92,7 @@ public class Main : MonoBehaviour
 
     void OnMapReady()
     {
-        _Player.InitGPSController();
+        _Player.Init();
         _CollectableManager.SpawnDefaultCollectibles();
     }
 
@@ -110,10 +112,25 @@ public class Main : MonoBehaviour
         return _Map.GeoToWorldPosition(GPSLocation, true);
     }
 
+    public Vector2d WorldToGPSLocation(Vector3 worldPosition)
+    {
+        if (!IsMapReady) return Vector2d.zero;
+
+        return _Map.WorldToGeoPosition(worldPosition);
+    }
+
     public Vector3 GetPlayerPosition()
     {
         return _Player.transform.position;
     }
 
+    public void CollectMask(MaskSO mask)
+    {
+        _Player.CollectMask(mask);
+    }
 
+    public void ActivateMask(MaskSO mask)
+    {
+        _Player.EquipMask(mask);
+    }
 }

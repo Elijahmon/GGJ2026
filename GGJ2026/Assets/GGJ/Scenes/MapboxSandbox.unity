@@ -1262,34 +1262,10 @@ PrefabInstance:
       propertyPath: _Player
       value: 
       objectReference: {fileID: 883317473}
-    - target: {fileID: 4314327169475505226, guid: 9b94fe8dde6427f4fabe966bb1871835, type: 3}
-      propertyPath: _PlayerTransform
-      value: 
-      objectReference: {fileID: 883317471}
-    - target: {fileID: 4314327169475505226, guid: 9b94fe8dde6427f4fabe966bb1871835, type: 3}
-      propertyPath: _playerTransform
-      value: 
-      objectReference: {fileID: 883317471}
-    - target: {fileID: 4314327169475505226, guid: 9b94fe8dde6427f4fabe966bb1871835, type: 3}
-      propertyPath: _CollectableManager
-      value: 
-      objectReference: {fileID: 1913856966}
     - target: {fileID: 4427108017249129638, guid: 9b94fe8dde6427f4fabe966bb1871835, type: 3}
       propertyPath: m_Name
       value: Main
       objectReference: {fileID: 0}
-    - target: {fileID: 5278779945004403205, guid: 9b94fe8dde6427f4fabe966bb1871835, type: 3}
-      propertyPath: defaultCollectables.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5278779945004403205, guid: 9b94fe8dde6427f4fabe966bb1871835, type: 3}
-      propertyPath: 'defaultCollectables.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 8fd895b1562dca14882cc4df0db6ae6d, type: 2}
-    - target: {fileID: 5278779945004403205, guid: 9b94fe8dde6427f4fabe966bb1871835, type: 3}
-      propertyPath: 'defaultCollectables.Array.data[1]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 4d1d0a8d8323fcc439cc57e3d531aed3, type: 2}
     - target: {fileID: 8924633550899735664, guid: 9b94fe8dde6427f4fabe966bb1871835, type: 3}
       propertyPath: m_LocalPosition.x
       value: -90.28805
@@ -1381,6 +1357,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1987155981849267301, guid: c373688aa6411e44d9d55eb449ed8991, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960157434433733661, guid: c373688aa6411e44d9d55eb449ed8991, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7372684249579298356, guid: c373688aa6411e44d9d55eb449ed8991, type: 3}
@@ -1734,18 +1714,6 @@ PrefabInstance:
     - target: {fileID: 4867834046800562, guid: e6b749c6d877f4c19a5a5c3c0783d53b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114478715909612932, guid: e6b749c6d877f4c19a5a5c3c0783d53b, type: 3}
-      propertyPath: _initializeOnStart
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114478715909612932, guid: e6b749c6d877f4c19a5a5c3c0783d53b, type: 3}
-      propertyPath: _options.scalingOptions.scalingType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114478715909612932, guid: e6b749c6d877f4c19a5a5c3c0783d53b, type: 3}
-      propertyPath: _options.placementOptions.snapMapToZero
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114478715909612932, guid: e6b749c6d877f4c19a5a5c3c0783d53b, type: 3}
       propertyPath: _options.extentOptions.defaultExtents.rangeAroundTransformOptions.targetTransform
@@ -2257,17 +2225,6 @@ Material:
     - _WindowColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &1913856966 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5278779945004403205, guid: 9b94fe8dde6427f4fabe966bb1871835, type: 3}
-  m_PrefabInstance: {fileID: 747740834}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dd00494ec61205489b2f2415f500d6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CollectibleManager
 --- !u!21 &1922094642
 Material:
   serializedVersion: 8

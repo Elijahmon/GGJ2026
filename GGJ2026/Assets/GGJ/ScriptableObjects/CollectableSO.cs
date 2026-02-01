@@ -9,4 +9,6 @@ public class CollectableSO : ScriptableObject
     public Vector2d GPSLocation;
     public float VisibilityRadius = 50f;
     public float CollectRadius = 10f;
+
+    public MaskSO MaskReward;
 }

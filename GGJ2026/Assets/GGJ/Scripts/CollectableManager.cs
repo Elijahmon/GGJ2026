@@ -34,6 +34,8 @@ public class CollectableManager : MonoBehaviour
         foreach (var collectable in spawnedCollectables)
         {
             Vector3 worldPos = Main.Instance.GPSToWorldPosition(GPSLocation);
+
+            collectable.transform.position = Main.Instance.GPSToWorldPosition(collectable.Data.GPSLocation);
             collectable.OnPlayerPositionUpdated(worldPos);
         }
     }
